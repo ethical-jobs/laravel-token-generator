@@ -1,0 +1,11 @@
+pipeline:
+
+  dependancies:
+    image: ethicaljobs/composer-prestissimo
+    pull: true
+    commands: 'composer install --prefer-dist'
+
+  test:
+    image: php:7.3-cli-alpine
+    pull: true
+    commands: './vendor/bin/phpunit'
