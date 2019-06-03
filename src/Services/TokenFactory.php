@@ -5,6 +5,7 @@ namespace EthicalJobs\Token\Services;
 use Carbon\Carbon;
 use EthicalJobs\Token\Models\Token;
 use Illuminate\Support\Str;
+use Ramsey\Uuid\Uuid;
 
 class TokenFactory
 {
@@ -17,7 +18,7 @@ class TokenFactory
         $token = new Token();
         $token->secret = $this->generateHash();
         $token->expires_at = Carbon::now()->addHours($expirationHours)->second(0);
-        $token->uuid = (string) Str::uuid();
+        $token->uuid = Uuid::uuid4()->toString();
         $token->save();
 
         return $token;
