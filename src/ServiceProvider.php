@@ -24,6 +24,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             $this->configPath => config_path('token.php'),
         ], 'config');
+
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     /**

@@ -5,9 +5,22 @@ namespace Tests\Integration\Services\Auth;
 use Carbon\Carbon;
 use EthicalJobs\Token\Services\TokenFactory;
 
-// TODO: Fix these tests (remove from project?)
 class TokenFactoryTest extends \Orchestra\Testbench\TestCase
 {
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->loadMigrationsFrom(__DIR__.'/../../../database/migrations');
+
+        \Config::set('token.expires', 192);
+    }
+
     /**
      * @test
      * @group Integration
