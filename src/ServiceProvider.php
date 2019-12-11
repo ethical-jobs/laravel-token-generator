@@ -4,6 +4,7 @@ namespace EthicalJobs\Token;
 
 /**
  * Service provider
+ * @deprecated
  */
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

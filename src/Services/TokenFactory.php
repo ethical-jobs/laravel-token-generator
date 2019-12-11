@@ -7,10 +7,14 @@ use EthicalJobs\Token\Models\Token;
 use Illuminate\Support\Str;
 use Ramsey\Uuid\Uuid;
 
+/**
+ * @deprecated
+ */
 class TokenFactory
 {
     /**
      * {@inheritdoc}
+     * @deprecated
      */
     public function create(): Token
     {
@@ -28,6 +32,7 @@ class TokenFactory
      * Generates a unique cryptographic hash
      *
      * @return string
+     * @deprecated
      */
     protected function generateHash(): string
     {

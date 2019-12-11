@@ -4,6 +4,7 @@
     "homepage": "https://github.com/ethical-jobs/laravel-token-generator",
     "type": "library",
     "license": "MIT",
+    "abandoned": true,
     "authors": [
         {
             "name": "EthicalJobs.com.au",
